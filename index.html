@@ -5,48 +5,80 @@
 	</head>
 
 	<body>
-		<svg width="600" height="400" background="rgb(100,200,0)" viewBox="0 0 600 400" xmlns="www.w3.org">
+		<svg width="600" height="400" style="background-color:rgb(100,200,0)" viewBox="0 0 600 400" xmlns="www.w3.org">
 		  
-		  <image id="img0" href="horse00.png" x="300" y="300" width="100" height="55" opacity="0">
+		  <image id="img0" href="horse00.png" x="250" y="300" width="100" height="55" opacity="0">
 		    <animate 
 		      id="horse0"
 		      attributeName="opacity" 
-		      from="0.5" to="1" 
+		      from="0.8" to="1" 
 		      dur="0.1s" 
 		      begin="0s;horse3.end" 
 		      repeatCount="1" 
 		    />
-		  </image>
 
-		  <image id="img1" href="horse01.png" x="300" y="300" width="100" height="55" opacity="0">
 		    <animate 
-		      id="horse1"
 		      attributeName="opacity" 
-		      from="0.5" to="1" 
+		      from="0.5" to="0" 
 		      dur="0.1s" 
 		      begin="horse0.end" 
 		      repeatCount="1" 
 		    />
 		  </image>
 
-		  <image id="img2" href="horse02.png" x="300" y="300" width="100" height="55" opacity="0">
+		  <image id="img1" href="horse01.png" x="250" y="300" width="100" height="55" opacity="0">
 		    <animate 
-		      id="horse2"
+		      id="horse1"
 		      attributeName="opacity" 
-		      from="0.5" to="1" 
+		      from="0.8" to="1" 
+		      dur="0.1s" 
+		      begin="horse0.end" 
+		      repeatCount="1" 
+		    />
+
+		    <animate 
+		      attributeName="opacity" 
+		      from="0.5" to="0" 
 		      dur="0.1s" 
 		      begin="horse1.end" 
 		      repeatCount="1" 
 		    />
 		  </image>
 
-		  <image id="img3" href="horse03.png" x="300" y="300" width="100" height="55" opacity="0">
+		  <image id="img2" href="horse02.png" x="250" y="300" width="100" height="55" opacity="0">
+		    <animate 
+		      id="horse2"
+		      attributeName="opacity" 
+		      from="0.8" to="1" 
+		      dur="0.1s" 
+		      begin="horse1.end" 
+		      repeatCount="1" 
+		    />
+
+		    <animate 
+		      attributeName="opacity" 
+		      from="0.5" to="0" 
+		      dur="0.1s" 
+		      begin="horse2.end" 
+		      repeatCount="1" 
+		    />
+		  </image>
+
+		  <image id="img3" href="horse03.png" x="250" y="300" width="100" height="55" opacity="0">
 		    <animate 
 		      id="horse3"
 		      attributeName="opacity" 
-		      from="0.5" to="1" 
+		      from="0.8" to="1" 
 		      dur="0.1s" 
 		      begin="horse2.end" 
+		      repeatCount="1" 
+		    />
+
+		    <animate 
+		      attributeName="opacity" 
+		      from="0.5" to="0" 
+		      dur="0.1s" 
+		      begin="horse3.end" 
 		      repeatCount="1" 
 		    />
 		  </image>
