@@ -27,30 +27,208 @@
 					    />
 					</stop>
 				</linearGradient>
+
+				<linearGradient id="hillGradient" x1="0%" y1="0%" x2="0%" y2="80%">
+					<stop offset="0%" stop-color="rgb(100, 50, 50)">
+					    <animate 
+					      attributeName="stop-color" 
+					      values="rgb(100, 50, 50);rgb(200, 100, 100);rgb(250, 200, 200);rgb(200, 100, 100);rgb(100, 50, 50)" 
+					      dur="100s" 
+					      begin="0s" 
+					      repeatCount="indefinite" 
+					    />
+					</stop>
+					<stop offset="100%" stop-color="rgb(50, 0, 0)">
+					    <animate 
+					      attributeName="stop-color" 
+					      values="rgb(50, 0, 0);rgb(150, 100, 100);rgb(200, 100, 100);rgb(150, 100, 100);rgb(50, 0, 0)" 
+					      dur="100s" 
+					      begin="0s" 
+					      repeatCount="indefinite" 
+					    />
+					</stop>
+				</linearGradient>
+
+				<linearGradient id="grassGradient" x1="0%" y1="0%" x2="0%" y2="50%">
+					<stop offset="0%" stop-color="rgb(100, 150, 100)">
+					    <animate 
+					      attributeName="stop-color" 
+					      values="rgb(100, 150, 100);rgb(100, 200, 100);rgb(150, 200, 150);rgb(100, 200, 100);rgb(100, 150, 100)" 
+					      dur="100s" 
+					      begin="0s" 
+					      repeatCount="indefinite" 
+					    />
+					</stop>
+					<stop offset="100%" stop-color="rgb(0, 50, 0)">
+					    <animate 
+					      attributeName="stop-color" 
+					      values="rgb(0, 50, 0);rgb(50, 100, 50);rgb(50, 200, 50);rgb(50, 100, 50);rgb(0, 50, 0)" 
+					      dur="100s" 
+					      begin="0s" 
+					      repeatCount="indefinite" 
+					    />
+					</stop>
+				</linearGradient>
 			</defs>
 
 		  <rect fill="url(#skyGradient)" x="0" y="0" width="600" height="400">
 
 		  </rect>
 
+
 		  <circle r="10" cx="650" cy="100" fill="rgb(250,250,200)" stroke="rgba(250,250,200,0.8)" stroke-width="5">
 		    <animate 
 		      id="moon0"
 		      attributeName="cx" 
-		      from="620" to="300" 
+		      from="620" to="400" 
 		      dur="50s" 
-		      begin="0s;moon0.end+50s" 
+		      begin="0s;moon3.end" 
 		      repeatCount="1" 
 		    />
 
 		    <animate 
+		      id="moon1"
 		      attributeName="opacity" 
 		      from="1" to="0" 
 		      dur="50" 
-		      begin="0s;moon0.end+50s" 
+		      begin="0s;moon3.end" 
 		      repeatCount="1" 
 		    />
+
+		    <animate 
+		      id="moon2"
+		      attributeName="cx" 
+		      from="300" to="-10" 
+		      dur="50s" 
+		      begin="moon1.end" 
+		      repeatCount="1" 
+		    />
+
+		    <animate 
+		      id="moon3"
+		      attributeName="opacity" 
+		      from="0" to="1" 
+		      dur="50s" 
+		      begin="moon1.end" 
+		      repeatCount="1" 
+		    /> 
 		  </circle>
+
+		  <g>		  
+		  	<path d="M0 350 
+				L40 300
+				L60 330
+				L90 250
+				L120 350
+				Z"
+
+				fill="url(#hillGradient)"
+		  	/>
+
+		  	<path d="M200 350 
+				L240 280
+				L280 350
+				Z"
+
+				fill="url(#hillGradient)"
+		  	/>
+
+		  	<path d="M280 350 
+				L300 300
+				L320 350
+				Z"
+
+				fill="url(#hillGradient)"
+		  	/>
+
+		  	<path d="M350 350 
+				L430 310
+				L460 330
+				L490 300
+				L520 330
+				L550 310
+				L600 350
+				Z"
+
+				fill="url(#hillGradient)"
+		  	/>
+
+		  	<path d="M600 350 
+				L640 300
+				L660 330
+				L690 250
+				L720 350
+				Z"
+
+				fill="url(#hillGradient)"
+		  	/>
+
+		  	<path d="M800 350 
+				L840 280
+				L880 350
+				Z"
+
+				fill="url(#hillGradient)"
+		  	/>
+
+		  	<path d="M880 350 
+				L900 300
+				L920 350
+				Z"
+
+				fill="url(#hillGradient)"
+		  	/>
+
+		  	<path d="M950 350 
+				L1030 310
+				L1060 330
+				L1090 300
+				L1120 330
+				L1150 310
+				L1200 350
+				Z"
+
+				fill="url(#hillGradient)"
+		  	/>
+
+		    <animateTransform 
+		      attributeName="transform" 
+		      type="translate" 
+		      from="0,0"    
+		      to="-600,0"     
+		      dur="5s" 
+		      repeatCount="indefinite" 
+		    />
+		  </g>
+
+		  <g>		  
+		  	<path d="M0 350 
+				Q100 340 200 350
+				Q300 345 350 350
+				Q500 340 600 350
+				Q700 340 800 350
+				Q900 345 950 350
+				Q1100 340 1200 350
+				L1200 450
+				L0 450
+				Z"
+
+				stroke-dasharray="2,3"
+				stroke="url(#grassGradient)" 
+				stroke-width="5" 
+				fill="url(#grassGradient)"
+		  	/>
+
+		    <animateTransform 
+		      attributeName="transform" 
+		      type="translate" 
+		      from="0,0"    
+		      to="-600,0"     
+		      dur="2.5s" 
+		      repeatCount="indefinite" 
+		    />
+		  </g>
+
 
 		  <image id="img0" href="horse00.png" x="250" y="300" width="100" height="55" opacity="0">
 		    <animate 
