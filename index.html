@@ -11,7 +11,7 @@
 					<stop offset="0%" stop-color="rgb(0, 0, 50)">
 					    <animate 
 					      attributeName="stop-color" 
-					      values="rgb(0, 0, 50);rgb(50, 150, 255);rgb(50, 150, 255);rgb(150, 50, 0);rgb(0, 0, 50)" 
+					      values="rgb(0, 0, 50);rgb(50, 150, 255);rgb(50, 150, 255);rgb(150, 20, 0);rgb(0, 0, 50)" 
 					      dur="100s" 
 					      begin="0s" 
 					      repeatCount="indefinite" 
@@ -49,20 +49,42 @@
 					</stop>
 				</linearGradient>
 
-				<linearGradient id="grassGradient" x1="0%" y1="0%" x2="0%" y2="50%">
-					<stop offset="0%" stop-color="rgb(100, 150, 100)">
+
+				<linearGradient id="hill2Gradient" x1="0%" y1="0%" x2="0%" y2="80%">
+					<stop offset="0%" stop-color="rgba(150, 150, 150, 0.5)">
 					    <animate 
 					      attributeName="stop-color" 
-					      values="rgb(100, 150, 100);rgb(100, 200, 100);rgb(150, 200, 150);rgb(100, 200, 100);rgb(100, 150, 100)" 
+					      values="rgba(150, 150, 150, 0.5);rgba(180, 180, 180, 0.5);rgba(200, 200, 200, 0.5);rgba(180, 180, 180, 0.5);rgba(150, 150, 150, 0.5)" 
 					      dur="100s" 
 					      begin="0s" 
 					      repeatCount="indefinite" 
 					    />
 					</stop>
-					<stop offset="100%" stop-color="rgb(0, 50, 0)">
+					<stop offset="100%" stop-color="rgba(50, 50, 50, 0.5)">
 					    <animate 
 					      attributeName="stop-color" 
-					      values="rgb(0, 50, 0);rgb(50, 100, 50);rgb(50, 200, 50);rgb(50, 100, 50);rgb(0, 50, 0)" 
+					      values="rgba(50, 50, 50, 0.5);rgba(80, 80, 80, 0.5);rgba(100, 100, 100, 0.5);rgba(80, 80, 80, 0.5);rgba(50, 50, 50, 0.5)" 
+					      dur="100s" 
+					      begin="0s" 
+					      repeatCount="indefinite" 
+					    />
+					</stop>
+				</linearGradient>
+
+				<linearGradient id="grassGradient" x1="0%" y1="0%" x2="0%" y2="50%">
+					<stop offset="0%" stop-color="rgb(80, 100, 80)">
+					    <animate 
+					      attributeName="stop-color" 
+					      values="rgb(80, 100, 80);rgb(100, 150, 100);rgb(120, 200, 120);rgb(100, 150, 100);rgb(80, 100, 80)" 
+					      dur="100s" 
+					      begin="0s" 
+					      repeatCount="indefinite" 
+					    />
+					</stop>
+					<stop offset="100%" stop-color="rgb(0, 20, 0)">
+					    <animate 
+					      attributeName="stop-color" 
+					      values="rgb(0, 20, 0);rgb(20, 50, 20);rgb(50, 100, 50);rgb(20, 50, 20);rgb(0, 20, 0)" 
 					      dur="100s" 
 					      begin="0s" 
 					      repeatCount="indefinite" 
@@ -113,6 +135,77 @@
 		      repeatCount="1" 
 		    /> 
 		  </circle>
+
+		  <g>		  
+		  	<path d="M100 350 
+				L140 250
+				L180 350
+				Z"
+
+				fill="url(#hill2Gradient)"
+		  	/>
+
+		  	<path d="M200 350 
+				L240 300
+				L260 330
+				L290 280
+				L330 350
+				Z"
+
+				fill="url(#hill2Gradient)"
+		  	/>
+
+		  	<path d="M350 350 
+				L380 260
+				L410 290
+				L440 260
+				L500 300
+				L550 280
+				L600 350
+				Z"
+
+				fill="url(#hill2Gradient)"
+		  	/>
+
+		  	<path d="M700 350 
+				L740 250
+				L780 350
+				Z"
+
+				fill="url(#hill2Gradient)"
+		  	/>
+
+		  	<path d="M800 350 
+				L840 300
+				L860 330
+				L890 280
+				L930 350
+				Z"
+
+				fill="url(#hill2Gradient)"
+		  	/>
+
+		  	<path d="M950 350 
+				L980 260
+				L1010 290
+				L1040 260
+				L1100 300
+				L1150 280
+				L1200 350
+				Z"
+
+				fill="url(#hill2Gradient)"
+		  	/>
+
+		    <animateTransform 
+		      attributeName="transform" 
+		      type="translate" 
+		      from="0,0"    
+		      to="-600,0"     
+		      dur="5s" 
+		      repeatCount="indefinite" 
+		    />
+		  </g>
 
 		  <g>		  
 		  	<path d="M0 350 
@@ -196,7 +289,7 @@
 		      type="translate" 
 		      from="0,0"    
 		      to="-600,0"     
-		      dur="5s" 
+		      dur="3s" 
 		      repeatCount="indefinite" 
 		    />
 		  </g>
