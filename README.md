@@ -1,4 +1,4 @@
-# Year of the Horse SVG Animation (TBA)
+# Year of the Horse SVG Animation
 This SVG is 600 by 400 pixels.
 
 ## Horse
